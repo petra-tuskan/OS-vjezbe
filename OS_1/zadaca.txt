@@ -1,0 +1,95 @@
+Zadatak 1:
+1.1. Provjera trenutnog radnog direktorija
+ 
+    pwd
+
+1.2. Izlistaj sadržaj trenutnog radnog direktorija
+
+    ls
+
+1.3. Napraviti novi direktorij vjezba1 i prebaciti se u njega
+
+    mkdir vjezba1 && cd vjezba1
+
+1.4. Unutar direktorija vjezba1 napraviti novu datoteku README.md
+
+    touch README.md
+
+1.5. Vratiti se u početni radni direktorij
+    cd ..
+
+
+
+Zadatak 2:
+2.1. Napraviti praznu datoteku file.txt unutar direktorija vjezba2
+
+    mdir vjezba2 && cd vjezba2 && touch file.txt
+
+2.2. Kopirati datoteku file.txt u direktorij vjezba2 i nazvati ju file_copy.txt
+
+    cp file.txt file_copy.txt
+
+2.3. Ispisati sve datoteke unutar direktorija vjezba2
+
+    ls 
+
+2.4. Obrisati datoteku file.txt i vratiti se u početni radni direktorij
+
+    rm file.txt && cd ..
+
+2.5. Pokušati izbrisati direktorij vjezba2. Zašto ne možete?
+
+    rmdir vježba2
+    Ne možemo zato što direktorij nije prazan
+
+
+
+Zadatak 3:
+3.1. Napraviti novi direktorij vjezba3 i unutar njega direktorij backup
+
+    mkdir vjezba3 && cd vjezba3 && mkdir backup
+
+3.2. Unutar direktorija vjezba3 napraviti 3 datoteke: notes.txt , todo.txt i script.sh
+
+    touch notes.txt todo.txt script.sh
+
+3.3. Kopirati sve datoteke iz direktorija vjezba3 u direktorij backup
+
+    cp notes.txt todo.txt script.sh backup
+
+3.4. Izbrisati samo datoteku script.sh iz direktorija vjezba3 i ispisati sve datoteke
+
+    rm script.sh && ls
+
+3.5. U backup dodati još jedan direktorij koju ćete imenovati USER varijablom
+
+    cd backup && mkdir $USER
+
+3.6. Premjestite sve datoteke iz direktorija backup u direktorij nazvan varijablom USER
+
+    mv notes.txt todo.txt script.sh $USER
+
+
+
+Zadatak 4:
+4.1. Napraviti novi direktorij vjezba4 i unutar njega direktorij subfolder
+
+    mkdir vjezba4 && cd vjezba4 && mkdir subfolder
+
+4.2. Unutar direktorija vjezba4 napraviti datoteku prema nazivu varijable HOSTNAME
+
+    touch $HOSTNAME
+
+4.3. Preimenovati novoizrađenu datoteku prema nazivu varijable USER
+
+    mv $HOSTNAME $USER
+
+4.4. PremjestitI datoteku USER u direktorij subfolder
+
+    mv $USER subfolder
+
+4.5. Izbrisati datoteku USER koristeći apsolutnu putanju
+
+    rm "$PWD/subfolder/$USER"
+
+
